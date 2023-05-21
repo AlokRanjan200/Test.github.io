@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+<style>
+  .container {
+    background-image:url(clock.jpg) ;
+    background-position: center;
+    background-size: contain;
+    height: 700px;
+    width: 700px;
+    justify-content: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 170px;
+  }
+
+  .form-group {
+    justify-content: center;
+    font-size: larger;
+    font-weight: bolder;
+    display: inline-block;
+    margin-top: 15%;
+    margin-left: 10%;
+  }
+
+ 
+  #set-alarm-btn{
+    justify-content: center;
+    color: red;
+    background-color: black;
+    border-radius: 50%;
+  }
+  .time{
+    border-radius: 10px;
+    margin-left: 50%;
+    font-weight: bolder;
+    margin-top: 120%;
+  }
+
+  .input{
+    border: 5px solid black;
+    border-radius: 10px;
+    margin-top: 10%;
+    width: 90px;
+    margin-left: 45%;
+  }
+  button {
+    display: inline-block;
+    margin-left: 140px;
+    margin-bottom: 30%;
+    margin-top: 10%;
+    width: 15%;
+    height: 45px;
+  }
+ 
+  #stop-alarm-btn{
+    color: red;
+    background-color: aqua;
+    border-radius: 50%;
+  }
+</style>
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Alarm Clock</h1>
+    <!-- box that contain alarm clock -->
+    <div class="container">
+        <!-- Minutes and hours entry  form. -->
+        <div class="form-group">
+          <label class="time" for="hours">Hours:</label>
+          <input class="input" type="number" id="hours" min="0" max="23">
+        </div>
+        <div class="form-group">
+          <label class="time" for="minutes">Minutes:</label>
+          <input class="input" type="number" id="minutes" min="0" max="59">
+        </div>
+        <!-- Start and stop button  -->
+        <div class="start-stop">
+        <button id="set-alarm-btn">Set Alarm</button>
+        <button id="stop-alarm-btn" disabled>Stop Alarm</button>
+        </div>
+        <p id="alarm-message"></p>
+      </div>
+      
+      <audio id="alarm-sound" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+      
+      <script src="index.js"></script>
+</body>
+</html>
